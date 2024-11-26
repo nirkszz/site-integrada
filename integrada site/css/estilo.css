@@ -1,0 +1,209 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Cabeçalho */
+/* Estilo para o cabeçalho e logo */
+header {
+    display: flex;
+    align-items: center; /* Alinha a logo e o título verticalmente */
+    justify-content: space-between; /* Coloca a logo à esquerda e o título à direita */
+    padding: 20px;
+    background-color: #ffffff; /* Fundo branco */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para o cabeçalho */
+}
+
+.logo-container {
+    flex: 1; /* Isso faz a logo ocupar o espaço à esquerda */
+}
+
+.logo {
+    max-width: 150px; /* Ajuste o tamanho da logo para um tamanho adequado */
+    height: auto;
+}
+
+header h1 {
+    flex: 3; /* O título ocupa o restante do espaço */
+    font-size: 2.5rem;
+    color: #000000; /* Cor do texto preta (garantido) */
+    margin-left: 20px; /* Deixa um espaço entre a logo e o título */
+    text-align: left;
+}
+
+header h3 {
+    flex: 3; /* O título ocupa o restante do espaço */
+    font-size: 2.5rem;
+    color: #000000; /* Cor do texto preta (garantido) */
+    background-color: #ffffff; /* Fundo branco */
+    margin-left: 20px; /* Deixa um espaço entre a logo e o título */
+    text-align: center;
+}
+
+
+/* Barra de navegação com Abas */
+nav {
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 50px;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Aba ativa */
+nav a:hover, nav a:focus {
+    background-color: #0056b3;
+}
+
+/* Estilizando o conteúdo */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Seção de conteúdo */
+.conteudo {
+    text-align: center;
+}
+
+.conteudo h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.conteudo p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.conteudo ul {
+    list-style: none;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.conteudo ul li {
+    padding: 10px 0;
+}
+
+/* Botão "Sobre Mim" com design aprimorado */
+.botao-sobre-mim {
+    display: inline-block;
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Gradiente de cores */
+    color: white;
+    padding: 16px 32px;
+    font-size: 1.3rem;
+    border-radius: 50px; /* Bordas arredondadas */
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: all 0.4s ease; /* Transição suave para efeitos de hover */
+    transform: translateY(0); /* Posição inicial */
+    cursor: pointer; /* Cursor de mão */
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+.botao-sobre-mim:hover {
+    background: linear-gradient(45deg, #2575fc, #6a11cb); /* Inverter gradiente no hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Aumentar sombra no hover */
+    transform: translateY(-4px); /* Elevação no hover */
+}
+
+.botao-sobre-mim:active {
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Manter gradiente original ao clicar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra mais suave ao clicar */
+    transform: translateY(2px); /* Efeito de afundamento */
+}
+
+
+
+/* Estilo para a seção Melhores Momentos */
+.melhores-momentos {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.melhores-momentos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.melhores-momentos p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.momentos-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.momento {
+    max-width: 300px;
+    text-align: center;
+}
+
+.momento img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.momento p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #444;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .conteudo h2 {
+        font-size: 2rem;
+    }
+
+    .momentos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .momento {
+        margin-bottom: 20px;
+    }
+}
